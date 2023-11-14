@@ -4,7 +4,7 @@ import moment from "moment";
 import dayjs from 'dayjs';
 import { Dialog, DialogTitle, DialogActions, TextField, Button } from "@mui/material";
 import {TimePicker} from "@mui/x-date-pickers";
-import './Calendar.css'
+// import './Calendar.css'
 import { useEffect, useState } from "react";
 
 const localizer = momentLocalizer(moment);
@@ -19,7 +19,6 @@ const MyCalendar = () => {
     const [start, setStart] = useState(null);  // must be Dates
     const [end, setEnd] = useState(null);
     const [clickedEvent, setClickedEvent] = useState({});
-    const [loaded, setLoaded] = useState(false);
 
     const closeDialog = () => {
       setSlotSelected(false);
@@ -47,7 +46,11 @@ const MyCalendar = () => {
 
     const handleSlotSelected = (slotInfo) => {
       setStart(slotInfo.start);
-      setEnd(slotInfo.end);
+      if(slotInfo.start.getDay() == slotInfo.end.getDay()) {
+        setEnd(slotInfo.end);
+      } else {
+        setEnd(new Date(slotInfo.start.getTime() + 30 * 60000))
+      }
       setSlotSelected(true);
     }
 
@@ -142,4 +145,3 @@ const MyCalendar = () => {
 }
 
 export default MyCalendar;
-
