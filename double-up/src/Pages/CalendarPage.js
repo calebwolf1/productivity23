@@ -1,5 +1,4 @@
 import Calendar from "../Components/Calendar"
-import moment from "moment";
 
 
 const CalendarPage = () => {
