@@ -21,7 +21,12 @@
   .rbc-toolbar-label {
     font-weight: bold;
     font-size: 22px;
-    color: #05AD8F
+    color: #ffffff
+  }
+
+  .rbc-event {
+    color: #ffffff;
+    background-color: #3bb9a6;
   }
   
   .rbc-date-cell {
@@ -33,18 +38,24 @@
     background-color: #CEF5EF !important;
   }
 
-  .rbc-btn-group {
-    button {
-      background-color: #3bb9a6;
-      color: #CEF5EF;
-      border: 1px solid #3b534f;
-      /* Add any other styles you want to customize */
+  .rbc-btn-group button{
+    background-color: #3bb9a6;
+    color: #CEF5EF;
+    border: 1px solid #3b534f;
+    /* Add any other styles you want to customize */
     }
-    .rbc-active {
-        background-color: #1dcab0;
+    .rbc-btn-group button.rbc-active:active{
+        background-color: #000000;
         color: #1dcab0;
-      }
-}
+    }
+    .rbc-btn-group button.rbc-active:hover{
+        background-color: #000000;
+        color: #1dcab0;
+    }
+    .rbc-btn-group button.rbc-active:focus {
+        background-color: #000000;
+        color: #1dcab0;
+    }
 
 
   
