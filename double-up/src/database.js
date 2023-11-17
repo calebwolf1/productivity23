@@ -5,10 +5,26 @@ import { storage } from "./firebase-config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 /**
- * Takes in paramaters and creates a profile
- * @param {String} name
- * @param {String} university
- * 
- * idk what other parameters we want to add
- * @returns the id of the newly created profile
+ * Takes in paramaters for the event
+ * @param {String} title
+ * @param {String} description
+ * @param {Number} startTime
+ * @param {Number} endTime
+ * @param {Number} currID
+ * @returns the id of the newly created event
  */
+const createEvent = async(title, description, startTime, endTime, currID) => {
+    const eventRef = await addDoc(collection(firestore, "events"), {
+        title: title,
+        description: description,
+        startTime: startTime,
+        endTime: endTime,
+        currID: currID
+    })
+
+    await updateDoc(userRef, {
+        events: arrayUnion(eventRef.id)
+    })
+
+    return eventRef.id;
+}
