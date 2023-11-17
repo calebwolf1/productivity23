@@ -10,12 +10,12 @@ function App() {
   return(
     <div>
       <Header />
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Routes>
-        <Route path='/' element={<CalendarPage />} />
-        <Route path='/session' element={<SessionPage />} />
-      </Routes>
-    </LocalizationProvider>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <Routes>
+          <Route path='/' element={<CalendarPage />} />
+          <Route path='/session' element={<SessionPage />} />
+        </Routes>
+      </LocalizationProvider>
     </div>
   )
 }
