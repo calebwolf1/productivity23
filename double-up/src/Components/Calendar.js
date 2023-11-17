@@ -6,6 +6,7 @@ import { Dialog, DialogTitle, DialogActions, TextField, Button } from "@mui/mate
 import {TimePicker} from "@mui/x-date-pickers";
 import './Calendar.css'
 import { useEffect, useState } from "react";
+import { createEvent } from "../database";
 
 const localizer = momentLocalizer(moment);
 
@@ -19,6 +20,10 @@ const MyCalendar = () => {
     const [start, setStart] = useState(null);  // must be Dates
     const [end, setEnd] = useState(null);
     const [clickedEvent, setClickedEvent] = useState({});
+
+    useEffect(() => {
+      createEvent("My title", "My description", 5, 6, 1);
+    })
 
     const closeDialog = () => {
       setSlotSelected(false);

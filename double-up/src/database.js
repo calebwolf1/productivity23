@@ -13,7 +13,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
  * @param {Number} currID
  * @returns the id of the newly created event
  */
-const createEvent = async(title, description, startTime, endTime, currID) => {
+export const createEvent = async(title, description, startTime, endTime, currID) => {
     const eventRef = await addDoc(collection(firestore, "events"), {
         title: title,
         description: description,
