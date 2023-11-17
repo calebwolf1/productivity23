@@ -2,7 +2,11 @@ import Meeting from '../Components/Meeting';
 
 const SessionPage = () => {
     return (
-        <Meeting />
+        <div>
+        {/* <Meeting /> */}
+        <h1>Hello</h1>
+        </div>
+        
     );
 }
 
