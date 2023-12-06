@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../Assets/logo.png'; // adjust the path based on your project structure
-import './Header.css'
+import './Header.css';
+
 
 function Header() {
   return (

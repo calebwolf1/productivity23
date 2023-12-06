@@ -5,14 +5,14 @@
     color: rgb(0, 0, 0);
   }
   
-  /* #Calendar {
+  #Calendar {
     height: 100%;
     width: 100%;
     margin: auto;
     margin-top:50px;
     margin-bottom: 50px;
     background: yellow; 
-  } */
+  }
   
   .rbc-month-view{
     flex-basis: 500px !important;
@@ -21,11 +21,18 @@
   .rbc-toolbar-label {
     font-weight: bold;
     font-size: 22px;
-    color: #ffffff
+    color: #3bb9a6
   }
 
   .rbc-event {
-    color: #ffffff;
+    background-color: #3bb9a6;
+  }
+
+  .rbc-event-content {
+    background-color: #3bb9a6;
+  }
+
+  .rbc-event.rbc-selected{
     background-color: #3bb9a6;
   }
   
@@ -40,20 +47,20 @@
 
   .rbc-btn-group button{
     background-color: #3bb9a6;
-    color: #CEF5EF;
+    color: 3bb9a6;
     border: 1px solid #3b534f;
     /* Add any other styles you want to customize */
     }
     .rbc-btn-group button.rbc-active:active{
-        background-color: #000000;
+        background-color: #CEF5EF;
         color: #1dcab0;
     }
     .rbc-btn-group button.rbc-active:hover{
-        background-color: #000000;
+        background-color: #CEF5EF;
         color: #1dcab0;
     }
     .rbc-btn-group button.rbc-active:focus {
-        background-color: #000000;
+        background-color: #CEF5EF;
         color: #1dcab0;
     }
 

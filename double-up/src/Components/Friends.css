@@ -1,0 +1,37 @@
+.background-friends-block {
+    position: absolute;
+    right:0%;
+    width:25%;
+    height:100%;
+    border-radius: 30px;
+    padding:0px;
+    background: linear-gradient(0.25turn, #27C0BC, #1A8AB7);    /* background-color: #05AD8F; */
+    z-index: -1;  
+  } 
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  .Friend {
+    margin: auto;
+    bottom: 72%;
+    right:0%;
+    width: 300px;
+    height: 85px;
+  }
+
+  .Friend1 {
+    margin: auto;
+    bottom: 50%;
+    right:0%;
+    width: 300px;
+    height: 85px;
+  }
+
+  .Friend2 {
+    margin: auto;
+    bottom: 28%;
+    right:0%;
+    width: 300px;
+    height: 85px;
+  }

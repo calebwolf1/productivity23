@@ -6,7 +6,6 @@ import { Dialog, DialogTitle, DialogActions, TextField, Button } from "@mui/mate
 import {TimePicker} from "@mui/x-date-pickers";
 import './Calendar.css'
 import { useEffect, useState } from "react";
-import { createEvent } from "../database";
 
 const localizer = momentLocalizer(moment);
 
@@ -21,9 +20,9 @@ const MyCalendar = () => {
     const [end, setEnd] = useState(null);
     const [clickedEvent, setClickedEvent] = useState({});
 
-    useEffect(() => {
-      createEvent("My title", "My description", 5, 6, 1);
-    })
+    const openInNewTab = (url) => {
+      window.open(url, "_blank", "noreferrer");
+    }
 
     const closeDialog = () => {
       setSlotSelected(false);
@@ -121,7 +120,7 @@ const MyCalendar = () => {
         </Dialog>
 
         <Dialog open={eventSelected} onClose={closeDialog}>
-          <DialogTitle>View/edit an appointment</DialogTitle>
+          <DialogTitle>Join an appointment</DialogTitle>
           <TextField 
             label="Title"
             value={title}
@@ -141,11 +140,11 @@ const MyCalendar = () => {
           <DialogActions>
             <Button onClick={closeDialog}>Cancel</Button>
             <Button color="error" onClick={deleteCurrentAppointment}>Delete</Button>
-            <Button variant="contained" onClick={changeCurrentAppointment}>Submit</Button>
+            <Button variant="contained" onClick={() => openInNewTab("https://meet.jit.si/Meeting_with_Chloe")}>Join</Button>
           </DialogActions>
         </Dialog>
       </div>
-      
+
     );
 }
 
